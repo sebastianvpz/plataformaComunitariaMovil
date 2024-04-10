@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="15dp"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:id="@+id/quejasContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- ImageView para la imagen de la queja -->
+        <ImageView
+            android:id="@+id/quejasImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_menu_camera" />
+
+        <!-- TextView para el título de la queja -->
+        <TextView
+            android:id="@+id/quejasTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Título de la queja"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+        <!-- TextView para la descripción de la queja -->
+        <TextView
+            android:id="@+id/quejasDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            android:text="Descripción de la queja" />
+
+        <!-- TextView para la ubicación de la queja -->
+        <TextView
+            android:id="@+id/quejasLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ubicación de la queja" />
+
+        <!-- TextView para la fecha de reporte de la queja -->
+        <TextView
+            android:id="@+id/quejasDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha de reporte de la queja" />
+
+        <!-- TextView para el nombre de usuario de la queja -->
+        <TextView
+            android:id="@+id/quejasUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre de usuario que reportó la queja" />
+
+        <!-- Botón de Reportar la queja -->
+        <Button
+            android:id="@+id/btnReportQueja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reportar Queja"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

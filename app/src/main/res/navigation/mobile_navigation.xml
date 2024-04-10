@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.proyectocomunitario.ui.fragments.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_proyectos"
+        android:name="com.example.proyectocomunitario.ui.fragments.project.ProyectoFragment"
+        android:label="fragment_proyecto"
+        tools:layout="@layout/fragment_proyecto" />
+    <fragment
+        android:id="@+id/nav_eventos"
+        android:name="com.example.proyectocomunitario.ui.fragments.events.EventosFragment"
+        android:label="EventosFragment" />
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.example.proyectocomunitario.ui.fragments.perfil.PerfilFragment"
+        android:label="PerfilFragment" />
+    <fragment
+        android:id="@+id/nav_quejas"
+        android:name="com.example.proyectocomunitario.ui.fragments.quejas.QuejasFragment"
+        android:label="QuejasFragment" />
+    <fragment
+        android:id="@+id/nav_reportes"
+        android:name="com.example.proyectocomunitario.ui.fragments.reportes.ReportesFragment"
+        android:label="ReportesFragment" />
+    <fragment
+        android:id="@+id/nuevapasswordFragment"
+        android:name="com.example.proyectocomunitario.ui.fragments.perfil.NuevapasswordFragment"
+        android:label="NuevapasswordFragment" />
+    <fragment
+        android:id="@+id/perfilmodificarFragment"
+        android:name="com.example.proyectocomunitario.ui.fragments.perfil.PerfilmodificarFragment"
+        android:label="PerfilmodificarFragment" />
+    <fragment
+        android:id="@+id/quejanuevaFragment"
+        android:name="com.example.proyectocomunitario.ui.fragments.quejas.QuejanuevaFragment"
+        android:label="QuejanuevaFragment" />
+    <fragment
+        android:id="@+id/nav_propuestaReporte"
+        android:name="com.example.proyectocomunitario.ui.fragments.propuestas.PropuestareporteFragment"
+        android:label="PropuestareporteFragment" />
+    <fragment
+        android:id="@+id/nav_propuestaNueva"
+        android:name="com.example.proyectocomunitario.ui.fragments.propuestas.ProuestanuevaFragment"
+        android:label="ProuestanuevaFragment" />
+    <fragment
+        android:id="@+id/quejareporteFragment"
+        android:name="com.example.proyectocomunitario.ui.fragments.quejas.QuejareporteFragment"
+        android:label="QuejareporteFragment" />
+    <fragment
+        android:id="@+id/perfilEventosFragment"
+        android:name="com.example.proyectocomunitario.ui.fragments.perfil.PerfilEventosFragment"
+        android:label="PerfilEventosFragment" />
+    <fragment
+        android:id="@+id/nav_propuesta"
+        android:name="com.example.proyectocomunitario.ui.fragments.propuestas.PropuestasFragment"
+        android:label="PropuestaFragment"/>
+    <fragment
+        android:id="@+id/nav_eventoreporte"
+        android:name="EnventoreporteFragment"
+        android:label="EnventoreporteFragment" />
+
+</navigation>
