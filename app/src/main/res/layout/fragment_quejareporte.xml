@@ -33,32 +33,20 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- EditText para el título de la queja -->
-    <EditText
-        android:id="@+id/editQuejaRazon"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:padding="8dp"
-        android:hint="Razon de la Queja"
-        app:layout_constraintTop_toBottomOf="@id/txtReportQueja"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- EditText para la descripción de la queja -->
     <EditText
-        android:id="@+id/editQuejaExplicacion"
+        android:id="@+id/editMensajeQueja"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:hint="Mensaje de la Queja"
         android:padding="8dp"
-        android:hint="Descripción de la Queja"
-        app:layout_constraintTop_toBottomOf="@id/editQuejaRazon"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/txtReportQueja" />
 
     <!-- Botón para publicar la queja -->
     <Button
@@ -68,7 +56,7 @@
         android:text="Reportar"
         android:textColor="@color/white"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/editQuejaExplicacion"
+        app:layout_constraintTop_toBottomOf="@id/editMensajeQueja"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:backgroundTint="@color/red"/>

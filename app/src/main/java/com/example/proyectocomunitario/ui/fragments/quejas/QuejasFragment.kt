@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -35,7 +36,12 @@ class QuejasFragment : Fragment() {
         token = sharedPreferences.getString("token", "") ?: ""
 
         quejaAdapter = QuejaAdapter(object : QuejaAdapter.OnItemClickListener {
-            override fun onReportQuejaClick(idQueja: Int) {
+            override fun onReportQuejaClick(idQueja: Long) {
+                val bundle = Bundle().apply {
+                    putLong("quejaId", idQueja)
+                }
+                Log.d("QuejasFragment", "ID de la queja seleccionada: $idQueja")
+                findNavController().navigate(R.id.quejareporteFragment,bundle)
             }
         })
         recyclerView.adapter = quejaAdapter

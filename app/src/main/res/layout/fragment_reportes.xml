@@ -42,58 +42,35 @@
             android:orientation="vertical"
             android:padding="24dp">
 
-            <!-- TextView para el estado de revisión -->
-            <TextView
-                android:id="@+id/revisadoTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="revisado "
-                android:textSize="14sp"
-                android:textColor="@color/green"
-                android:layout_gravity="end"/>
-
-            <!-- TextView para el título del reporte -->
-            <TextView
-                android:id="@+id/reportTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="Título del reporte"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-
-            <!-- TextView para el tipo del reporte -->
             <TextView
                 android:id="@+id/reportType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="8dp"
-                android:text="Tipo: Tipo del reporte" />
+                android:padding="16dp"
+                android:text="Tipo del reporte"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
-            <!-- TextView para la razón del reporte -->
             <TextView
-                android:id="@+id/reportReason"
+                android:id="@+id/reportMensaje"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:paddingBottom="8dp"
-                android:text="Razón: Razón del reporte" />
+                android:text="Mensaje del reporte" />
 
-            <!-- TextView para la fecha del reporte -->
             <TextView
-                android:id="@+id/reportDate"
+                android:id="@+id/reportFecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:paddingBottom="16dp"
-                android:text="Fecha: Fecha del reporte" />
+                android:paddingBottom="8dp"
+                android:text="Fecha del reporte" />
 
-            <!-- LinearLayout horizontal para los botones de acción -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

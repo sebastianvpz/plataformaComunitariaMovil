@@ -1,7 +1,7 @@
 package com.example.proyectocomunitario.model
 
 data class Queja(
-    val id: Int,
+    val id: Long,
     val username: String,
     val titulo: String,
     val ubicacion: String,

@@ -44,10 +44,6 @@
         android:name="com.example.proyectocomunitario.ui.fragments.quejas.QuejanuevaFragment"
         android:label="QuejanuevaFragment" />
     <fragment
-        android:id="@+id/nav_propuestaReporte"
-        android:name="com.example.proyectocomunitario.ui.fragments.propuestas.PropuestareporteFragment"
-        android:label="PropuestareporteFragment" />
-    <fragment
         android:id="@+id/nav_propuestaNueva"
         android:name="com.example.proyectocomunitario.ui.fragments.propuestas.ProuestanuevaFragment"
         android:label="ProuestanuevaFragment" />
@@ -67,5 +63,9 @@
         android:id="@+id/nav_eventoreporte"
         android:name="EnventoreporteFragment"
         android:label="EnventoreporteFragment" />
+    <fragment
+        android:id="@+id/nav_propuestaReporte"
+        android:name="com.example.proyectocomunitario.ui.fragments.propuestas.PropuestaReporteFragment"
+        android:label="PropuestaReporteFragment" />
 
 </navigation>

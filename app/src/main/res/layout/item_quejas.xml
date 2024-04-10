@@ -60,6 +60,7 @@
 
         <!-- TextView para el nombre de usuario de la queja -->
         <TextView
+            android:visibility="invisible"
             android:id="@+id/quejasUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,6 +68,7 @@
 
         <!-- Botón de Reportar la queja -->
         <Button
+            android:backgroundTint="@color/red"
             android:id="@+id/btnReportQueja"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

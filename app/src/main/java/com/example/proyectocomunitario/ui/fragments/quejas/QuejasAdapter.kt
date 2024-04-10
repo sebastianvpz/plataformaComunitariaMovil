@@ -20,7 +20,7 @@ class QuejaAdapter(private val listener: OnItemClickListener) :
     private var quejas: List<Queja> = emptyList()
 
     interface OnItemClickListener {
-        fun onReportQuejaClick(idQueja: Int)
+        fun onReportQuejaClick(idQueja: Long)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuejaViewHolder {
@@ -57,6 +57,7 @@ class QuejaAdapter(private val listener: OnItemClickListener) :
                 }
             }
         }
+
 
         fun bind(queja: Queja) {
             if (!queja.img.isNullOrEmpty()) {
