@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
-        android:padding="24dp">
+        android:padding="20dp">
 
         <!-- ImageView para la imagen del proyecto -->
         <ImageView
@@ -30,15 +30,19 @@
         <!-- Línea separadora entre la imagen y el texto -->
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/lavender" />
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black" />
 
         <!-- TextView para el título del proyecto -->
         <TextView
             android:id="@+id/proyectoTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="16dp"
+
             android:text="Título del proyecto"
             android:textSize="18sp"
             android:textStyle="bold"

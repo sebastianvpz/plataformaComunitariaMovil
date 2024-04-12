@@ -38,9 +38,7 @@ class PerfilmodificarFragment : Fragment() {
             usuario?.let { mostrarDatosUsuario(it) }
         }
 
-        binding.btnBack.setOnClickListener {
-            findNavController().popBackStack()
-        }
+
 
         binding.btnModificar.setOnClickListener {
             modificarUsuario()

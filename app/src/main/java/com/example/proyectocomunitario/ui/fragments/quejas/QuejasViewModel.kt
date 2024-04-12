@@ -21,7 +21,7 @@ class QuejasViewModel(private val context: Context) : ViewModel() {
         obtenerQuejas()
     }
 
-    private fun obtenerQuejas() {
+    public fun obtenerQuejas() {
         val sharedPreferences = context.getSharedPreferences("user_session", Context.MODE_PRIVATE)
         val token = sharedPreferences.getString("jwt_token", "")
 

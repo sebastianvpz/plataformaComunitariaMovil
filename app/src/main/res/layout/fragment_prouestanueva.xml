@@ -8,34 +8,22 @@
     android:background="@drawable/bgmain"
     tools:context=".ui.fragments.propuestas.PropuestasFragment">
 
-    <!-- Botón para retroceder -->
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cancelar"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- Título "Reportar Propuesta" -->
     <TextView
         android:id="@+id/txtNuevaPropuesta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Nueva Propuesta"
         android:textColor="@color/teal_200"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBack" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- EditText para la razón del reporte -->
     <EditText
-        android:id="@+id/editNewPropuesta"
+        android:id="@+id/editTitleNewPropuesta"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -47,21 +35,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- EditText más grande para la descripción del reporte -->
     <EditText
         android:id="@+id/editDescNewPropuesta"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:padding="8dp"
         android:hint="Descripción de la propuesta"
-        app:layout_constraintTop_toBottomOf="@id/editNewPropuesta"
+        app:layout_constraintTop_toBottomOf="@id/editTitleNewPropuesta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Botón rojo "Reportar" centrado -->
+    <EditText
+        android:id="@+id/editUbicacionNewPropuesta"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        android:hint="Ubicación de la propuesta"
+        app:layout_constraintTop_toBottomOf="@id/editDescNewPropuesta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imagePickerPropuesta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu_camera"
+        android:clickable="true"
+        android:onClick="openGallery"
+        app:layout_constraintTop_toBottomOf="@id/editUbicacionNewPropuesta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <Button
         android:id="@+id/btnNewPropuesta"
         android:layout_width="wrap_content"
@@ -70,7 +80,7 @@
         android:textColor="@android:color/white"
         android:backgroundTint="@color/lavender"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/editDescNewPropuesta"
+        app:layout_constraintTop_toBottomOf="@id/imagePickerPropuesta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

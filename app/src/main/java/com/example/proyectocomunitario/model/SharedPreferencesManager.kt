@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 
 object SharedPreferencesManager {
 
-    private const val PREF_NAME = "MyPreferences"
+    private const val PREF_NAME = "user_session"
     private const val KEY_TOKEN = "token"
 
     fun guardarToken(context: Context, token: String) {
@@ -19,5 +19,10 @@ object SharedPreferencesManager {
         val sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
         return sharedPreferences.getString(KEY_TOKEN, null)
     }
+    fun getUserId(context: Context): String? {
+        val sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+        return sharedPreferences.getString("user_id", "")
+    }
+
 
 }

@@ -7,6 +7,7 @@ import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface ReporteService {
 
@@ -16,9 +17,11 @@ interface ReporteService {
         @Header("Authorization") token: String
     ): Call<List<ReporteGeneral>>
 
-    @DELETE("/reportes/eliminar")
+    @DELETE("/reportes/eliminar/{id}")
     fun eliminarReporte(
-        @Body requestBody: Map<String, Any>,
-        @Header("Authorization") token: String
+        @Header("Authorization") token: String,
+        @Path("id") reporteId: Long,
+        @Query("tipo") tipoReporte: String
     ): Call<Void>
+
 }

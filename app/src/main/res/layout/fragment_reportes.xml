@@ -22,69 +22,14 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="10dp" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/reportesCardView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewReportes"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="15dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="4dp"
         app:layout_constraintTop_toBottomOf="@id/textPropuestasTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-        <LinearLayout
-            android:id="@+id/reportesContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="24dp">
-
-            <TextView
-                android:id="@+id/reportType"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="Tipo del reporte"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-
-            <TextView
-                android:id="@+id/reportMensaje"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="8dp"
-                android:text="Mensaje del reporte" />
-
-            <TextView
-                android:id="@+id/reportFecha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="8dp"
-                android:text="Fecha del reporte" />
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <!-- Botón de Eliminar el reporte -->
-                <Button
-                    android:id="@+id/btnDeleteReport"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Eliminar Reporte"
-                    android:layout_marginEnd="8dp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

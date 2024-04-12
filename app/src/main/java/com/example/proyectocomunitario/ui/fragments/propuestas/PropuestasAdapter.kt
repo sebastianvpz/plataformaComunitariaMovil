@@ -31,8 +31,6 @@ class PropuestasAdapter(
         val currentPropuesta = getItem(position)
         holder.bind(currentPropuesta)
         holder.itemView.setOnClickListener { onItemClick(currentPropuesta) }
-        holder.likeButton.setOnClickListener { onLikeButtonClick(currentPropuesta) }
-        holder.dislikeButton.setOnClickListener { onDislikeButtonClick(currentPropuesta) }
         holder.reportButton.setOnClickListener { onReportButtonClick(currentPropuesta.id) }
     }
 
@@ -41,8 +39,7 @@ class PropuestasAdapter(
         private val descriptionTextView: TextView = itemView.findViewById(R.id.propuestaDescription)
         private val locationTextView: TextView = itemView.findViewById(R.id.propuestaLocation)
         private val imageView: ImageView = itemView.findViewById(R.id.propuestaImage)
-        val likeButton: Button = itemView.findViewById(R.id.btnLike)
-        val dislikeButton: Button = itemView.findViewById(R.id.btnDislike)
+
         val reportButton: Button = itemView.findViewById(R.id.btnReportPropuesta)
 
         fun bind(propuesta: Propuesta) {

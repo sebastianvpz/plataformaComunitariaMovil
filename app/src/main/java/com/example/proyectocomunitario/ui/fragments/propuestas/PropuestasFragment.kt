@@ -38,6 +38,10 @@ class PropuestasFragment : Fragment() {
         )
         recyclerView.adapter = propuestasAdapter
 
+        view.findViewById<View>(R.id.btnNuevaPropuestaView).setOnClickListener{
+            findNavController().navigate(R.id.nav_propuestaNueva)
+        }
+
         return view
     }
 

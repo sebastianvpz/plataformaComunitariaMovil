@@ -55,11 +55,17 @@ class QuejasFragment : Fragment() {
             quejaAdapter.actualizarQuejas(quejas)
         })
 
-        root.findViewById<View>(R.id.btnNuevaQueja).setOnClickListener {
+        root.findViewById<View>(R.id.btnNuevaQuejaView).setOnClickListener {
             findNavController().navigate(R.id.quejanuevaFragment)
         }
 
         return root
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Obtener las quejas cuando se crea la vista del fragmento
+        quejaViewModel.obtenerQuejas()
     }
 
 }

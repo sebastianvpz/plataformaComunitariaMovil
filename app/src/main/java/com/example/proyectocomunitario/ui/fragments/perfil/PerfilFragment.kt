@@ -58,6 +58,6 @@ class PerfilFragment : Fragment() {
         binding.editApellidosNo.setText(usuario.apellido)
         binding.ediEmailNo.setText(usuario.email)
         binding.editUsernameNo.setText(usuario.email)
-        binding.editContraseANo.setText(usuario.password)
+        binding.editContraseANo.setText(".........")
     }
 }
