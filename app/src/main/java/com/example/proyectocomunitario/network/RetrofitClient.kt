@@ -2,6 +2,7 @@ package com.example.proyectocomunitario.network
 
 import com.example.proyectocomunitario.service.AuthService
 import com.example.proyectocomunitario.service.EventoService
+import com.example.proyectocomunitario.service.NoticiaService
 import com.example.proyectocomunitario.service.ParticipacionEventoService
 import com.example.proyectocomunitario.service.PropuestaService
 import com.example.proyectocomunitario.service.ProyectoService
@@ -45,5 +46,8 @@ object RetrofitClient {
     }
     val propuestaService : PropuestaService by  lazy {
         retrofit.create(PropuestaService::class.java)
+    }
+    val noticiaService: NoticiaService by  lazy {
+        retrofit.create(NoticiaService:: class.java)
     }
 }

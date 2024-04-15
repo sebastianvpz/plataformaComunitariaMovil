@@ -9,62 +9,14 @@
     tools:context=".ui.fragments.home.HomeFragment">
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/newsCardView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNews"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_height="0dp"
         android:layout_marginTop="20dp"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="4dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:id="@+id/newsContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:orientation="vertical"
-            android:padding="24dp">
-
-            <!-- ImageView para la imagen de la noticia -->
-            <ImageView
-                android:id="@+id/newsImage"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/evento" />
-
-            <!-- Línea separadora entre la imagen y el texto -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/lavender" />
-
-            <!-- TextView para el título de la noticia -->
-            <TextView
-                android:id="@+id/newsTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:text="Título de la noticia"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <!-- TextView para la descripción de la noticia -->
-            <TextView
-                android:id="@+id/newsDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="16dp"
-                android:text="Descripción de la noticia" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
