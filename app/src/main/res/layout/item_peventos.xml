@@ -34,7 +34,7 @@
 
         <!-- Botón para desenmarcar el evento -->
         <Button
-            android:id="@+id/btnDesenmarcar"
+            android:id="@+id/btnDesenmarcarEventos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Desenmarcar"

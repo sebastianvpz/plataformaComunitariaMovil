@@ -8,30 +8,14 @@
     android:background="@drawable/bgmain"
     tools:context=".ui.fragments.propuestas.PropuestasFragment">
 
-    <TextView
-        android:id="@+id/textQuejasTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="QUEJAS DE LA COMUNIDAD"
-        android:textColor="@color/teal_200"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="10dp" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewQuejas"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintTop_toBottomOf="@id/textQuejasTitle"
-        app:layout_constraintBottom_toTopOf="@id/btnNuevaQuejaView"
+        app:layout_constraintBottom_toTopOf="@+id/btnNuevaQuejaView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnNuevaQuejaView"

@@ -61,4 +61,33 @@ class PerfileventosViewModel : ViewModel() {
 
         }
     }
+
+    fun eliminarParticipacionEvento(context: Context, usuarioId: Long, eventoId: Long) {
+        val token = sharedPreferences.getString("jwt_token", "")
+
+        if (!token.isNullOrEmpty()) {
+            Log.d("PerfilEventosViewModel", "Eliminando participación del evento...")
+            RetrofitClient.participacionEventoService.cancelarParticipacion("Bearer $token", usuarioId, eventoId).enqueue(object : Callback<Void> {
+                override fun onResponse(call: Call<Void>, response: Response<Void>) {
+                    if (response.isSuccessful) {
+                        Log.d("PerfilEventosViewModel", "Participación eliminada correctamente")
+                        // Llamar al método cargarParticipacionesPorUsuario para actualizar la lista de eventos
+                        cargarParticipacionesPorUsuario(context)
+                    } else {
+                        _error.value = "Error al eliminar la participación del evento: ${response.message()}"
+                        Log.e("PerfilEventosViewModel", "Error al eliminar la participación del evento: ${response.message()}")
+                    }
+                }
+
+                override fun onFailure(call: Call<Void>, t: Throwable) {
+                    _error.value = "Error de red al eliminar la participación del evento: ${t.message}"
+                    Log.e("PerfilEventosViewModel", "Error de red al eliminar la participación del evento: ${t.message}")
+                }
+            })
+        } else {
+            _error.value = "Token JWT vacío."
+            Log.e("PerfilEventosViewModel", "Token JWT vacío.")
+        }
+    }
+
 }

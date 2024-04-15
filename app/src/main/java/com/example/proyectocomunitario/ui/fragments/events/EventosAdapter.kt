@@ -36,6 +36,7 @@ class EventosAdapter(
         private val tituloTextView: TextView = itemView.findViewById(R.id.eventosTitle)
         private val descripcionTextView: TextView = itemView.findViewById(R.id.eventosDescription)
         private val fechaTextView: TextView = itemView.findViewById(R.id.eventosDate)
+        private val ubicacionTextView: TextView = itemView.findViewById(R.id.eventosLocation)
         val asistirButton: Button = itemView.findViewById(R.id.btnAsistir) // Botón "Asistir"
         private val imagenEvento: ImageView = itemView.findViewById(R.id.eventosImage)
         val reportButton: Button = itemView.findViewById(R.id.btnReportar) // Botón "Reportar"
@@ -44,6 +45,7 @@ class EventosAdapter(
             tituloTextView.text = evento.titulo
             descripcionTextView.text = evento.descripcion
             fechaTextView.text = evento.fechaHora
+            ubicacionTextView.text = evento.ubicacion
 
             // Decode base64 string to byte array
             val decodedImageBytes = Base64.decode(evento.img, Base64.DEFAULT)

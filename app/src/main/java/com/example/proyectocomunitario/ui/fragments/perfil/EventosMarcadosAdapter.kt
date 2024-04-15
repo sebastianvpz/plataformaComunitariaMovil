@@ -13,7 +13,8 @@ import com.example.proyectocomunitario.model.Evento
 import com.example.proyectocomunitario.model.ParticipacionEvento
 
 class EventosMarcadosAdapter(
-    private val onItemClick: (Evento) -> Unit
+    private val onItemClick: (Evento) -> Unit,
+    private val onDesenmarcarClick: (Long) -> Unit // Cambiado a Long para pasar el id de ParticipacionEvento
 ) : ListAdapter<Evento, EventosMarcadosAdapter.EventoViewHolder>(EventoDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventoViewHolder {
@@ -26,12 +27,13 @@ class EventosMarcadosAdapter(
         val currentEvento = getItem(position)
         holder.bind(currentEvento)
         holder.itemView.setOnClickListener { onItemClick(currentEvento) }
+        holder.desenmarcarButton.setOnClickListener { onDesenmarcarClick(currentEvento.id) }
     }
 
     class EventoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tituloTextView: TextView = itemView.findViewById(R.id.txtEventoTitulo)
         private val fechaLugarTextView: TextView = itemView.findViewById(R.id.txtEventoFechaLugar)
-        private val desenmarcarButton: Button = itemView.findViewById(R.id.btnDesenmarcar)
+        val desenmarcarButton: Button = itemView.findViewById(R.id.btnDesenmarcarEventos)
 
         fun bind(evento: Evento) {
             tituloTextView.text = evento.titulo

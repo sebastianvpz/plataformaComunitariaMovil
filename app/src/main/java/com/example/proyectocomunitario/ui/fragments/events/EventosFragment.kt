@@ -30,6 +30,9 @@ class EventosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentEventosBinding.inflate(inflater, container, false)
+
+
+
         return binding.root
     }
 
@@ -64,6 +67,11 @@ class EventosFragment : Fragment() {
                 eventosViewModel.cargarEventos(requireContext())
             }
         })
+        binding.btnNuevoEventoView.setOnClickListener {
+            // Navegar al fragmento EventoNewFragment
+            findNavController().navigate(R.id.eventoNewFragment)
+        }
+
 
         eventosViewModel.cargarEventos(requireContext())
     }

@@ -13,59 +13,64 @@
     <fragment
         android:id="@+id/nav_proyectos"
         android:name="com.example.proyectocomunitario.ui.fragments.project.ProyectoFragment"
-        android:label="fragment_proyecto"
+        android:label="@string/menu_proyectos"
         tools:layout="@layout/fragment_proyecto" />
     <fragment
         android:id="@+id/nav_eventos"
         android:name="com.example.proyectocomunitario.ui.fragments.events.EventosFragment"
-        android:label="EventosFragment" />
+        android:label="@string/menu_eventos" />
     <fragment
         android:id="@+id/nav_perfil"
         android:name="com.example.proyectocomunitario.ui.fragments.perfil.PerfilFragment"
-        android:label="PerfilFragment" />
+        android:label="@string/menu_perfil" />
     <fragment
         android:id="@+id/nav_quejas"
         android:name="com.example.proyectocomunitario.ui.fragments.quejas.QuejasFragment"
-        android:label="QuejasFragment" />
+        android:label="@string/menu_quejas" />
     <fragment
         android:id="@+id/nav_reportes"
         android:name="com.example.proyectocomunitario.ui.fragments.reportes.ReportesFragment"
-        android:label="ReportesFragment" />
+        android:label="@string/menu_reportes" />
     <fragment
         android:id="@+id/nuevapasswordFragment"
         android:name="com.example.proyectocomunitario.ui.fragments.perfil.NuevapasswordFragment"
-        android:label="NuevapasswordFragment" />
+        android:label="@string/vacio" />
     <fragment
         android:id="@+id/perfilmodificarFragment"
         android:name="com.example.proyectocomunitario.ui.fragments.perfil.PerfilmodificarFragment"
-        android:label="PerfilmodificarFragment" />
+        android:label="@string/vacio" />
     <fragment
         android:id="@+id/quejanuevaFragment"
         android:name="com.example.proyectocomunitario.ui.fragments.quejas.QuejanuevaFragment"
-        android:label="QuejanuevaFragment" />
+        android:label="@string/vacio" />
     <fragment
         android:id="@+id/nav_propuestaNueva"
         android:name="com.example.proyectocomunitario.ui.fragments.propuestas.ProuestanuevaFragment"
-        android:label="ProuestanuevaFragment" />
+        android:label="@string/vacio" />
     <fragment
         android:id="@+id/quejareporteFragment"
         android:name="com.example.proyectocomunitario.ui.fragments.quejas.QuejareporteFragment"
-        android:label="QuejareporteFragment" />
+        android:label="@string/vacio" />
     <fragment
         android:id="@+id/perfilEventosFragment"
         android:name="com.example.proyectocomunitario.ui.fragments.perfil.PerfilEventosFragment"
-        android:label="PerfilEventosFragment" />
+        android:label="@string/tus_eventos" />
     <fragment
         android:id="@+id/nav_propuesta"
         android:name="com.example.proyectocomunitario.ui.fragments.propuestas.PropuestasFragment"
-        android:label="PropuestaFragment"/>
+        android:label="@string/menu_propuesta" />
     <fragment
         android:id="@+id/nav_eventoreporte"
         android:name="EnventoreporteFragment"
-        android:label="EnventoreporteFragment" />
+        android:label="@string/vacio" />
     <fragment
         android:id="@+id/nav_propuestaReporte"
         android:name="com.example.proyectocomunitario.ui.fragments.propuestas.PropuestaReporteFragment"
-        android:label="PropuestaReporteFragment" />
+        android:label="@string/vacio" />
+    <fragment
+        android:id="@+id/eventoNewFragment"
+        android:name="com.example.proyectocomunitario.ui.fragments.events.EventoNewFragment"
+        android:label="@string/vacio"
+        tools:layout="@layout/fragment_evento_new" />
 
 </navigation>

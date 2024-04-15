@@ -1,5 +1,7 @@
 package com.example.proyectocomunitario.ui.fragments.perfil
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -17,6 +19,9 @@ class PerfilEventosFragment : Fragment() {
     private lateinit var viewModel: PerfileventosViewModel
     private lateinit var eventosAdapter: EventosMarcadosAdapter
 
+    private lateinit var sharedPreferences: SharedPreferences
+    private var userId: String? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,25 +33,40 @@ class PerfilEventosFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Configurar el adaptador del RecyclerView
-        eventosAdapter = EventosMarcadosAdapter { /* handle item click if needed */ }
+        sharedPreferences = requireContext().getSharedPreferences("user_session", Context.MODE_PRIVATE)
+        userId = sharedPreferences.getString("user_id", "")
+
+        eventosAdapter = EventosMarcadosAdapter(
+            onItemClick = { /* handle item click if needed */ },
+            onDesenmarcarClick = { eventoId ->
+                desenmarcarEvento(eventoId)
+            }
+        )
         binding.recyclerViewEventosMarcados.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = eventosAdapter
         }
 
-        // Inicializar y observar el ViewModel
         viewModel = ViewModelProvider(this).get(PerfileventosViewModel::class.java)
         viewModel.eventosList.observe(viewLifecycleOwner, Observer { eventos ->
-            Log.i("PerfilEventosFragment", "Eventos list updated: $eventos")
             eventosAdapter.submitList(eventos)
         })
         viewModel.error.observe(viewLifecycleOwner, Observer { error ->
             Log.i("PerfilEventosFragment", "Error: $error")
-
-            // Handle error if needed
         })
 
+        cargarParticipaciones()
+    }
+
+    private fun cargarParticipaciones() {
         viewModel.cargarParticipacionesPorUsuario(requireContext())
+
+    }
+
+    private fun desenmarcarEvento(eventoId: Long) {
+
+        if (!userId.isNullOrEmpty()){
+            viewModel.eliminarParticipacionEvento(requireContext(), userId!!.toLong(), eventoId)
+        }
     }
 }

@@ -8,44 +8,23 @@
     android:background="@drawable/bgmain"
     tools:context=".ui.fragments.propuestas.PropuestasFragment">
 
-    <!-- Botón para retroceder -->
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cancelar"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- Título "Eventos Marcados" -->
-    <TextView
-        android:id="@+id/txtEventosMarcados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Eventos Marcados"
-        android:textColor="@color/teal_200"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBack" />
+
+
 
     <!-- RecyclerView para mostrar eventos marcados -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewEventosMarcados"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/txtEventosMarcados"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
